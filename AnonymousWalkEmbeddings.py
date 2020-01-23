@@ -321,7 +321,7 @@ class AWE(object):
             # save temporary embeddings
             if not ep%10:
                 self.graph_embeddings = session.run(self.normalized_doc_embeddings)
-                np.savez_compressed(RESULTS_FOLDER + '/' + dataset +  '/tmp/embeddings_{}.txt'.format(ep), E=self.graph_embeddings)
+                np.savez_compressed('doc2vec_results/' + '/' + dataset +  '/tmp/embeddings_{}.txt'.format(ep), E=self.graph_embeddings)
 
         self.graph_embeddings = session.run(self.normalized_doc_embeddings)
 
