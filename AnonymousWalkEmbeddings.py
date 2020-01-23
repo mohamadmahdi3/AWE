@@ -147,8 +147,8 @@ class AWE(object):
         self.nodes_per_graphs = dict()
 
         label_suffix = ''
-        if graph_labels is not None:
-            label_suffix = '_' + graph_labels
+        if self.graph_labels is not None:
+            label_suffix = '_' + self.graph_labels
 
         if self.regenerate_corpus == True or not os.path.exists(self.ROOT + self.dataset + '_corpus' + label_suffix):
             if not os.path.exists(self.ROOT + self.dataset + '_corpus' + label_suffix):
