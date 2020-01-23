@@ -162,7 +162,7 @@ class AWE(object):
                 self.nodes_per_graphs[en] = len(g2v.graph)
 
 
-                g2v.write_corpus(self.neiborhood_size, self.walk_ids, steps, self.graph_labels,
+                g2v.write_corpus(self.neiborhood_size, self.walk_ids, self.steps, self.graph_labels,
                                  self.ROOT + self.dataset + '_corpus{}/{}'.format(label_suffix, self.corpus_fn_name.format(en)))
 
     def _init_graph(self):
