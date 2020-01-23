@@ -263,7 +263,7 @@ class AWE(object):
             label_suffix = '_' + graph_labels
 
         while True:
-            batch_data, batch_labels = self.g2v.generate_file_batch(batch_size, window_size, self.doc_id,
+            batch_data, batch_labels = self.g2v.generate_file_batch(self.batch_size, window_size, self.doc_id,
                                                                     self.ROOT + self.dataset + '_corpus{}/{}'.format(label_suffix, self.corpus_fn_name.format(self.doc_id)),
                                                                     self.nodes_per_graphs[self.doc_id])
             # batch_data, batch_labels = self.g2v.generate_random_batch(batch_size=self.batch_size,
