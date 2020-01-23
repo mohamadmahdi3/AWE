@@ -410,7 +410,7 @@ class AnonymousWalks(object):
 #             Instead got {} neighborhood and window = {}'''.format(len(neighborhood), window_size)
 
             for _ in range(c[line_idx]):
-                batch_sample = np.random.choice(neighborhood, window_size + 1, replace=False)
+                batch_sample = np.random.choice(neighborhood, window_size + 1, replace=True)
                 batch[i, :window_size] = batch_sample[:window_size]
                 labels[i, 0] = batch_sample[window_size]
                 i += 1
