@@ -406,8 +406,8 @@ class AnonymousWalks(object):
             # line = linecache.getline(corpus_fn, line_idx+1)
             neighborhood = list(map(int, line.strip().split()))
 
-            assert len(neighborhood) >= window_size + 1, '''Corpus neighborhood size should have be at least window_size. 
-            Instead got {} neighborhood and window = {}'''.format(len(neighborhood), window_size)
+#             assert len(neighborhood) >= window_size + 1, '''Corpus neighborhood size should have be at least window_size. 
+#             Instead got {} neighborhood and window = {}'''.format(len(neighborhood), window_size)
 
             for _ in range(c[line_idx]):
                 batch_sample = np.random.choice(neighborhood, window_size + 1, replace=False)
